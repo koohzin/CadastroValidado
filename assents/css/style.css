@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6666;
+    font-family: 'Poiret One', cursive;
+    flex-direction: column;
+}
+main{
+    background-color: white;
+    max-width: 500px;
+    min-height: 50vh;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+main h2{
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 2rem;
+}
+main h2::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 0.5px;
+    left: 0;
+    border-radius: 8px;
+    background-color: #ff6666;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+
+.input .underline::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input .underline::after{
+    content: "";
+    position: absolute;
+    height: 1.3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #ff6666;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+.input input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+form .input:first-child{
+    margin-bottom: 1.5rem;
+}
+.input input{
+    outline: none;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.input input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Poiret One', cursive;
+    font-weight: 1000;
+}
+button{
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background-color: #ff6666;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    color: #212529;
+}
+button:hover{
+    letter-spacing: 0.5px;
+    background-color: #ff4a3d;
+}
+
+.error{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #ff4a3d;
+    font-weight: 1000;
+}
